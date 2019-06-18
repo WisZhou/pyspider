@@ -7,7 +7,7 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <meta name="description" content="pyspider dashboard">
+    <meta name="description" content="智慧机器人 采集器">
     <meta name="author" content="binux">
     <link href="{{ url_for('cdn', path='twitter-bootstrap/3.1.1/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ url_for('cdn', path='x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css') }}" rel="stylesheet">
@@ -23,7 +23,7 @@
         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         Project is not started, please set status to RUNNING or DEBUG.
       </div>
-      <h1>pyspider dashboard</h1>
+      <h1>采集管理</h1>
       <table class="table queue-info">
         <tr>
           <th>调度中</th>
@@ -54,7 +54,7 @@
     <section>
       <div class="global-btn clearfix">
         <div class="create-btn-div">
-          <button class="project-create btn btn-default btn-primary" data-toggle="modal" data-target="#create-project-modal">Create</button>
+          <button class="project-create btn btn-default btn-primary" data-toggle="modal" data-target="#create-project-modal">新建任务</button>
         </div>
 
         <div class="active-btn-div">
@@ -68,25 +68,25 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Create New Project</h4>
+                <h4 class="modal-title">新建任务</h4>
               </div>
               <form class="form-horizontal" method="POST">
                 <div class="modal-body">
                   <div class="form-group">
-                    <label class="col-sm-3 control-label" for="project-name">Project Name</label>
+                    <label class="col-sm-3 control-label" for="project-name">任务名称</label>
                     <div class="col-sm-9">
                       <input class="form-control" type="text" name="project-name" autocomplete="off">
                       <span class="help-block" style="display: none;">[a-zA-Z0-9_]+</span>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-3 control-label" for="start-urls">Start URL(s)</label>
+                    <label class="col-sm-3 control-label" for="start-urls">起始页面</label>
                     <div class="col-sm-9">
                       <input class="form-control" type="text" name="start-urls">
                     </div>
                   </div>
-                  <div class="form-group">
-                    <label class="col-sm-3 control-label" for="script-mode">Mode</label>
+                  <div class="form-group hidden">
+                    <label class="col-sm-3 control-label" for="script-mode">采集模式</label>
                     <div class="col-sm-9">
                       <div class="btn-group" data-toggle="buttons">
                         <label class="btn btn-default active">
@@ -100,8 +100,8 @@
                   </div>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-primary">新建任务</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                  <button type="submit" class="btn btn-primary">新建</button>
                 </div>
               </form>
             </div>
