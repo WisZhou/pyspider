@@ -83,18 +83,10 @@ class QuitableFlask(Flask):
             self.ioloop.add_callback(self.ioloop.stop)
         self.logger.info('webui exiting...')
 
-
-ENV = os.getenv('ENV', 'dev')
-if ENV in ('test', 'pro'):
-    app = QuitableFlask('webui',
-                        static_url_path='/spider/static',
-                        static_folder=os.path.join(os.path.dirname(__file__), 'static'),
-                        template_folder=os.path.join(os.path.dirname(__file__), 'templates'))
-else:
-    app = QuitableFlask('webui',
-                        static_url_path='/static',
-                        static_folder=os.path.join(os.path.dirname(__file__), 'static'),
-                        template_folder=os.path.join(os.path.dirname(__file__), 'templates'))
+app = QuitableFlask('webui',
+                    static_url_path='/static',
+                    static_folder=os.path.join(os.path.dirname(__file__), 'static'),
+                    template_folder=os.path.join(os.path.dirname(__file__), 'templates'))
 app.secret_key = os.urandom(24)
 app.jinja_env.line_statement_prefix = '#'
 app.jinja_env.globals.update(builtins.__dict__)
