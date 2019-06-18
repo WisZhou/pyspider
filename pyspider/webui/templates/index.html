@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Dashboard - pyspider</title>
+    <title>智慧机器人 | 采集器</title>
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -26,13 +26,13 @@
       <h1>pyspider dashboard</h1>
       <table class="table queue-info">
         <tr>
-          <th>scheduler</th>
+          <th>调度中</th>
           <td class="queue_value" title="scheduler2fetcher">???</td>
-          <th>fetcher</th>
+          <th>抓取中</th>
           <td class="queue_value" title="fetcher2processor">???</td>
-          <th>processor</th>
+          <th>处理中</th>
           <td class="queue_value" title="processor2result">???</td>
-          <th>result_worker</th>
+          <th>存储中</th>
         </tr>
         <tr>
           <td style="border-width: 0px 1px;"></td>
@@ -59,7 +59,7 @@
 
         <div class="active-btn-div">
           {% if config.scheduler_rpc is not none %}
-            <a class="btn btn-default btn-info" href='/tasks' target=_blank>Recent Active Tasks</a>
+            <a class="btn btn-default btn-info" href='/tasks' target=_blank>活动中的任务</a>
           {% endif %}
         </div>
 
@@ -101,7 +101,7 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-primary">Create</button>
+                  <button type="submit" class="btn btn-primary">新建任务</button>
                 </div>
               </form>
             </div>
