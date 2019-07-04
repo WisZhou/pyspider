@@ -116,3 +116,4 @@ local_docker/static/
 qaa_robot/ai/*.json
 qaa_robot/ai/*.h5
 data/
+pyspider/config.json

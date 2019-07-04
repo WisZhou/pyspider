@@ -20,6 +20,6 @@ amqp>=1.3.0,<2.0
 redis
 redis-py-cluster
 kombu
-psycopg2
+# psycopg2
 elasticsearch
 tblib
